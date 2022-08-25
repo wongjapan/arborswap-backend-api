@@ -49,7 +49,7 @@
     "ethers-multicall": "^0.2.3",
     "express": "^4.18.1",
     "express-validation": "^4.1.0",
-    "graphql": "^16.5.0",
+    "graphql": "^16.6.0",
     "graphql-request": "^4.3.0",
     "helmet": "^5.1.0",
     "http-status": "^1.5.2",
