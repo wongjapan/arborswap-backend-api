@@ -5,7 +5,8 @@ const compress = require("compression");
 const helmet = require("helmet");
 const methodOverride = require("method-override");
 const cors = require("cors");
-const routes = require("../routes");
+const apiRoutes = require("../routes/api");
+const webRoutes = require("../routes/web");
 const { logs } = require("./vars");
 const error = require("../middlewares/error");
 
@@ -36,7 +37,9 @@ app.use(helmet());
 app.use(cors());
 
 // mount api v1 routes
-app.use("/api", routes);
+app.use("/", webRoutes);
+// mount api v1 routes
+app.use("/api", apiRoutes);
 
 // if error is not an instanceOf APIError, convert it.
 app.use(error.converter);
